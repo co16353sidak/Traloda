@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Feedback | Traloda</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="icon.png" type="image">
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <nav class="left">
+      <a href="#menu"><span>Menu</span></a>
+    </nav>
+    <a href="index.html" class="logo"><span class="edwardian" style="font-family: 'EdwardianScriptITC'">T</span><span style="font-family: 'Parchment-Regular'"> raloda</span></a>
+    <nav class="right">
+      <a href="book.html" class="button alt">Book Now</a>
+    </nav>
+  </header>
+
+  <!-- Menu -->
+  <nav id="menu">
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experiences.html">Experiences</a></li>
+      <li><a href="index.html#main">How does it Work ?</a></li>
+    </ul>
+    <ul class="actions vertical">
+      <li><a href="book.html" class="button fit">Book Now</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <section id="main" class="wrapper">
+    <div class="inner">
+      <div class="row">
+      <form method="post" action="https://formspree.io/ravi@traloda.com" method="post">
+        <div class="row uniform">
+          <div class="6u 12u$(xsmall)">
+            <h3>Your Name</h3>
+            <input type="text" name="name" id="name" value="" placeholder="Your Name" required/>
+          </div>
+          <div class="6u$ 12u$(xsmall)">
+            <h3>Your email</h3>
+            <input type="email" name="email" id="email" value="" placeholder="Your Email"  required/>
+          </div>
+          <div class="6u 12u$(xsmall)">
+            <h3>Your Age</h3>
+            <input type="number" name="age" id="age" placeholder="Your Age"  required/>
+          </div>
+          <div class="6u$ 12u$(xsmall)">
+            <h3>Gender</h3>
+            <div class="select-wrapper">
+              <select name="category" id="category">
+                <option value="">-Select-</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="6u 12u$(xsmall)">
+            <h3>Birthday<br> </h3>
+            <input type="date" name="birthday" id="date" placeholder="dd/mm/yyy" style="margin-top: 1.4em;" required/>
+          </div>
+          <div class="6u$ 12u$(xsmall)">
+            <h3>When did you begin your Relationship? (Anniversary)</h3>
+            <input type="date" name="anniversary" id="date" placeholder="dd/mm/yyyy"  required/>
+          </div>
+          <!-- Break -->
+          <div class="12u$">
+            <h3>Rate your overall experience with Traloda</h3>
+            <div class="select-wrapper">
+              <select name="category" id="category">
+          <option value="">-Select-</option>
+          <option value="Worst">1 : Worst</option>
+          <option value="Bad">2 : Bad</option>
+          <option value="Great">3 : Average</option>
+          <option value="Great">4 : Great</option>
+          <option value="Magical">5 : Magical</option>
+        </select>
+            </div>
+          </div>
+          <!-- Break -->
+          <div class="12u$">
+            <h3>Which 2 did you like the most ?</h3>
+            <input type="checkbox" id="location" name="location" value="location">
+            <label for="location">Location</label>
+            <input type="checkbox" id="decoration" name="decoration" value="decoration">
+            <label for="decoration">Decoration</label>
+            <input type="checkbox" id="Food" name="Food" value="food">
+            <label for="food">Food</label>
+            <input type="checkbox" id="hospitality" name="hospitality">
+            <label for="hospitality">Hospitality</label>
+            <input type="checkbox" id="other" name="other" value="other" onClick="custom(value)">
+            <label for="other" >Other (please mention in message area)</label>
+          </div>
+
+          <div class="12u$" id="custom" style="display: none;">
+            <textarea name="other" id="other" placeholder="" rows="1"></textarea>
+          </div>
+
+
+          <!-- Break -->
+          <div class="12u$">
+            <h3>We love custom messages! Tell us how we can become better</h3>
+            <textarea name="message" id="message" placeholder="" rows="6"></textarea>
+          </div>
+          <div class="12u$">
+            <h3>We would love to put your experience on our website(Testimonial)</h3>
+            <textarea name="testimonial" id="testimonial" placeholder="" rows="8"></textarea>
+          </div>
+          <!-- Break -->
+          <div class="12u$">
+            <ul class="actions">
+              <li><input type="submit" value="Submit Feedback" /></li>
+              <li><input type="reset" value="Reset" class="alt" /></li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  </section>
+
+  <hr />
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+      <h2>Still not convinced, find out more.</h2>
+      <div class="row">
+      <div class="4u 12u$(small)">
+        <ul class="">
+          <li style="font-size: 1.5em; font-weight: bold; text-decoration: underline;">Contact Us</li>
+          <li><strong>Call us at</strong></li>
+          <li>+91-8377015140</li>
+          <li>+91-9899356916</li>
+          <li><strong>Write to us:</strong></li>
+          <li>info@traloda.com</li>
+        </ul>
+      </div>
+      <div class="4u 12u$(small)">
+        <ul>
+          <li>Our experiences</li>
+          <li>Gallery</li>
+          <li>Ask us a question</li>
+          <a href="partner.html"><li>Partner with Us</li></a>
+        </ul>
+      </div>
+      <div class="4u$ 12u$(small)">
+        <ul class="icons">
+          <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    &copy;2018:Traloda.com.
+    <div>
+      Website Design by Sidak Singh Aulakh
+    </div>
+  </div>
+  </footer>
+
+  <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+    function custom(choice) {
+      // var choice = document.getElementById("opts").value;
+      if (choice == 'other') {
+        document.getElementById('custom').style.display="block";
+      }
+      else {
+        document.getElementById('custom').style.display="none";
+      }
+      }
+    </script>
+
+</body>
+</html>

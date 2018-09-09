@@ -1,0 +1,77 @@
+
+(function($) {
+
+	skel.breakpoints({
+		xlarge:	'(max-width: 1680px)',
+		large:	'(max-width: 1280px)',
+		medium:	'(max-width: 980px)',
+		small:	'(max-width: 736px)',
+		xsmall:	'(max-width: 480px)'
+	});
+
+	$(function() {
+
+		var	$window = $(window),
+			$body = $('body'),
+			$header = $('#header');
+
+		// Disable animations/transitions until the page has loaded.
+			$body.addClass('is-loading');
+
+			$window.on('load', function() {
+				window.setTimeout(function() {
+					$body.removeClass('is-loading');
+				}, 100);
+			});
+
+		// Fix: Placeholder polyfill.
+			$('form').placeholder();
+
+		// Prioritize "important" elements on medium.
+			skel.on('+medium -medium', function() {
+				$.prioritize(
+					'.important\\28 medium\\29',
+					skel.breakpoint('medium').active
+				);
+			});
+
+		// Scrolly.
+			$('.scrolly').scrolly({
+				offset: function() {
+					return $header.height();
+				}
+			});
+
+		// Menu.
+			$('#menu')
+				.append('<a href="#menu" class="close"></a>')
+				.appendTo($body)
+				.panel({
+					delay: 500,
+					hideOnClick: true,
+					hideOnSwipe: true,
+					resetScroll: true,
+					resetForms: true,
+					side: 'right'
+				});
+
+				$(".header").click(function () {
+
+	    $header = $(this);
+	    //getting the next element
+	    $content = $header.next();
+	    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+	    $content.slideToggle(500, function () {
+	        //execute this after slideToggle is done
+	        //change text of header based on visibility of content div
+	        $header.text(function () {
+	            //change text based on condition
+	            return $content.is(":visible") ? "Hide" : "Read more";
+	        });
+	    });
+
+	});
+
+	});
+
+})(jQuery);
